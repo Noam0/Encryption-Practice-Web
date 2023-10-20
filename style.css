@@ -1,0 +1,114 @@
+body{
+    background-color: #F9F7F7;
+
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to right, #24568f, #2d589e);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute items with space between them */
+    align-items: center; /* Vertically center items within the header */
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); /* 2. Add shadow */
+}
+
+#text-header {
+    font-family: 'PT Sans', sans-serif;
+    color: #F9F7F7;
+    margin-left: 8px; /* Adjust the value as needed */
+}
+
+h3{
+    margin-top: 100px;
+
+}
+
+#noam-header{
+    color: #F9F7F7;
+    font-size: 20px;
+    position: relative; /* Set position to relative */
+    left:-10px;
+}
+
+
+
+.calculation-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #DBE2EF;
+        width: 100%;
+       
+        
+}
+
+#text-to-encrypt,#shifts-or-key,#input-text,#shifts-or-key-label,#encrypt-button{
+    position: relative;
+    left: 5px;
+
+}
+
+#text-to-encrypt {  
+     
+    width: 500px;
+    height: 175px;
+}
+
+#shifts-or-key{
+    width: 500px;
+    height: 32px;
+}
+
+
+
+
+
+#encrypt-button {
+    margin-top: 10px;
+    background-color: #3F72AF;
+    color: #EEEEEE;
+    border: 1px solid #333;
+    padding: 7px 7px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold; /* 1. Make the text bold */
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); /* 2. Add shadow */
+    transition: box-shadow 0.2s; /* 3. Transition for the hover effect */
+}
+
+#encrypt-button:hover {
+    background-color: #295e9e; /* Dark background color on hover */
+    color: #f0f0f0; /* Light text color on hover */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* 3. Bigger shadow on hover */
+}
+
+#output{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    left: 5px;
+    color:#000000
+}
+
+.radio-button-div {
+    display: flex;
+    align-items: center;
+}
+
+
+input[type=radio], input[type=checkbox]{
+    
+    margin-left: 1em; /* Adjust this value to control the spacing */
+    transform: scale(1.2); /* Reset the scale to normal */
+}

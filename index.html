@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Calculator</title>
+    <link rel = "stylesheet" type = "text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=PT+Sans&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<body>
+<div class = "header"> 
+    <h1 id = "text-header">Encryption Calculator</h1>
+    <h2 id="noam-header"> created by Noam Ben Binyamin</h2>
+</div id = first-div>
+<h3>choose your encryption calculator</h3>
+<div class="radio-button-div">
+    <input type ="radio" name = "encrypt-method" id ="vigenere" value = "vigenere" checked>
+    <label for = "viginere">Viginere </label>
+    <input type ="radio" name = "encrypt-method" id ="caesar" value = "caesar">
+    <label for = "caesar">Caesar </label>
+</div>
+<hr>
+
+<div class = "calculation-container">
+    <p id = input-text>input text</p>
+    <textarea id = text-to-encrypt></textarea>
+    <p id="shifts-or-key-label">Key</p>
+    <textarea id = "shifts-or-key"></textarea>
+    <button id ="encrypt-button"> encrypt</button>
+    <output id = "output"> </output>
+</div>
+<div>
+    <h2 id = about-header>About Viginere Encryption</h2>
+    <p id="encryption-about">
+        <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher" target="_blank"><span>Vigenere encryption</span></a> is a polyalphabetic substitution cipher where each letter in the plaintext is shifted according to a keyword,<br>
+        creating a more complex and secure encryption than the simple Caesar cipher.<br>
+        It uses a keyword to determine the amount of shift for each character,<br>
+        allowing different parts of the message to be shifted by different amounts, making it harder to decrypt without the keyword.<br> The result is a more secure form of encryption compared to Caesar ciphers.
+    </p>
+</div>
+
+<div>
+    <h4>Let's walk through an example to understand how it works:</h4>
+    <p id="how-vigenere">
+
+        Suppose we have a plaintext message: "HELLO" and a keyword: "KEY."
+    
+        First, we repeat the keyword to match the length of the plaintext:<br>
+        Plaintext: HELLO<br>
+        Keyword: KEYKE
+    
+        Next, we assign a numerical value to each letter, where A=0, B=1, C=2, and so on:<br>
+        HELLO -> 7 4 11 11 14
+    
+        We also convert the keyword to numbers:<br>
+        KEYKE -> 10 4 24 10 4
+    
+        Now, we shift each letter of the plaintext by the corresponding letter in the keyword:<br>
+        H -> 7 (H + K)<br>
+        E -> 8 (E + E)<br>
+        L -> 35 (L + Y)<br>
+        L -> 21 (L + K)<br>
+        O -> 18 (O + E)
+    
+        Finally, we convert the shifted numbers back to letters:<br>
+        C -> 7 (A=0, B=1, C=2)<br>
+        I -> 8<br>
+        A -> 35 (Z=25, A=0, B=1, C=2)<br>
+        K -> 11<br>
+        S -> 18
+        So, the encrypted message is "CIAKS."<br>
+        To decrypt the message, the recipient uses the same keyword to reverse the process and reveal the original plaintext, "HELLO."
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
