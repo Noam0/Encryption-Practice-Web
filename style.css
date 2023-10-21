@@ -112,19 +112,17 @@ input[type=radio], input[type=checkbox]{
     margin-left: 1em; /* Adjust this value to control the spacing */
     transform: scale(1.2); /* Reset the scale to normal */
 }
-@media (max-width: 600px){
+
+@media (max-width: 535px){
 
     .calculation-container{
         width: 600px;
         height: 300px;
     }
 
-}
+    #text-to-encrypt,#shifts-or-key{
+        width: 400px;
+    
+       }
 
-@media (max-width: 600px){
-
-   #text-to-encrypt,#shifts-or-key{
-    width: 400px;
-
-   }
 }
